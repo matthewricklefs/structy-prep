@@ -4,7 +4,7 @@
 - These nodes could also point to other nodes
 - The lines between the nodes are called edges
 
-## Terms To Use
+### Terms To Use
 
 Familial Relationships
 
