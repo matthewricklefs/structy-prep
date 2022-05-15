@@ -5,14 +5,6 @@ The function should return an array containing:
     all values of the tree in depth-first order.
 */
 
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.left = null;
-    this.right = null;
-  }
-}
-
 // Traditionally, DFT will use stack
 // With a stack: FILO
 // - You can only remove from the top of the stack
@@ -25,7 +17,28 @@ class Node {
 // Space Complexity:
 //    Space: O(n)
 
-const depthFirstValues = (root) => {
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+const a = new Node('a');
+const b = new Node('b');
+const c = new Node('c');
+const d = new Node('d');
+const e = new Node('e');
+const f = new Node('f');
+
+a.left = b;
+a.right = c;
+b.left = d;
+b.right = e;
+c.right = f;
+
+const iterativeDFV = (root) => {
   const result = [];
   const stack = [root];
 
@@ -52,17 +65,14 @@ const depthFirstValues = (root) => {
   return result;
 };
 
-const a = new Node('a');
-const b = new Node('b');
-const c = new Node('c');
-const d = new Node('d');
-const e = new Node('e');
-const f = new Node('f');
+const recursiveDFV = (root) => {
+  if (root === null) return [];
 
-a.left = b;
-a.right = c;
-b.left = d;
-b.right = e;
-c.right = f;
+  const leftValues = recursiveDFV(root.left);
+  const rightValues = recursiveDFV(root.right);
 
-console.log(depthFirstValues(a));
+  return [root.val, ...leftValues, ...rightValues];
+};
+
+console.log(iterativeDFV(a));
+console.log(recursiveDFV(a));
