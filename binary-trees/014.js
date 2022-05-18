@@ -34,7 +34,7 @@ c.right = f;
 // 4   -2     1
 
 const levelAverages = (root) => {
-  if (root === null) return 0;
+  if (root === null) return [];
 
   const levels = [];
   const stack = [{ node: root, levelNum: 0 }];
