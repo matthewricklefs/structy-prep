@@ -53,3 +53,14 @@
   - A true BFT approach would begin traveling from the current node to one neighbor and then again from that same node to any other neighboring nodes.
   - As soon as there are no longer any neighbor nodes to travel toward, the algorithm will then recreate the process starting from what were the neighboring nodes to all of their neighboring nodes.
   - In an undirected graph, the BFT algo will tend to explore all directions evenly instead of favoring one direction all the way through.
+
+#### Acyclic Graphs
+
+What is an acylclic graph?
+
+- It has no cycles
+
+What is a cycle?
+
+- Some path through nodes where one could end up where one started.
+- Could be an infinite loop.
