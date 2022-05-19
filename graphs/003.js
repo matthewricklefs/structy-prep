@@ -22,6 +22,7 @@ const undirectedPath = (edges, nodeA, nodeB) => {
   return hasPath(graph, nodeA, nodeB, new Set());
 };
 
+// traversal through a path but also guarding for an infinite loop (adding visited var)
 const hasPath = (graph, src, dst, visited) => {
   if (src === dst) return true;
   // is src in visited?
@@ -39,6 +40,7 @@ const hasPath = (graph, src, dst, visited) => {
   return false;
 };
 
+// converting an edge list to an adjacency list
 const buildGraph = (edges) => {
   const graph = {};
 
