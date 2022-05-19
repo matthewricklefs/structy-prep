@@ -40,7 +40,13 @@
 
 #### Depth First: Stack
 
--
+- Can only insert and remove from the top of the stack.
+- Considered the current node popped the current node.
+- Look at all of its neighbors
+
+  - Push one then push the other.
+  - After popping all neighboring nodes you have completed one iteration.
+  - Move to the neighbors and repeat the process.
 
 - Breadth First Traversal
 
