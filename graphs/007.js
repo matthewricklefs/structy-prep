@@ -41,6 +41,8 @@ const explore = (grid, r, c, visited) => {
   if (visited.has(position)) return false;
   visited.add(position);
 
+  console.log(position);
+
   // above
   explore(grid, r - 1, c, visited);
   // below
