@@ -31,9 +31,10 @@ const countingChange = (amount, coins, i = 0, memo = {}) => {
   for (let qty = 0; qty * coin <= amount; qty += 1) {
     const remainder = amount - qty * coin;
 
-    total += countingChange(remainder, coins, i + 1);
+    total += countingChange(remainder, coins, i + 1, memo);
   }
 
+  memo[key] = total;
   return total;
 };
 
