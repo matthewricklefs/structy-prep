@@ -26,7 +26,7 @@ const maxPalinSubsequence = (str, i = 0, j = str.length - 1, memo = {}) => {
   return memo[key];
 };
 
-console.log(maxPalinSubsequence('luwxult')); // -> 5
+console.log(maxPalinSubsequence('luwxult')); // -> 5*
 console.log(maxPalinSubsequence('xyzaxxzy')); // -> 6
 console.log(maxPalinSubsequence('z')); // -> 1
 console.log(maxPalinSubsequence('chartreusepugvicefree')); // -> 7
